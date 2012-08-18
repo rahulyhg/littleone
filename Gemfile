@@ -12,6 +12,7 @@ gem 'capistrano'
 gem 'memcached'
 gem 'redis'
 gem 'resque'
+gem 'mobylette'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -24,4 +25,5 @@ end
 
 group :development do
   gem 'debugger'
+  gem 'thin'
 end

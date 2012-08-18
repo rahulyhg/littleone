@@ -1,4 +1,7 @@
 Littleone::Application.routes.draw do
+
+  root :to => "users#dashboard"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
