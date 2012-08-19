@@ -1,0 +1,12 @@
+.login_page
+  .title Sign in
+
+  = form_tag(login_url, :method => "post") do
+    .line
+      %label Username:
+      = text_field_tag :username
+    .line
+      %label Password:
+      = password_field_tag :password
+    .line
+      = submit_tag "Login"

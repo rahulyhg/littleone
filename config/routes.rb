@@ -1,5 +1,9 @@
 Littleone::Application.routes.draw do
 
+  match 'login' => "users#login", :via => [:post, :get]
+  match 'logout' => "users#logout", :via => [:post, :get]
+  match 'dashboard' => "users#dashboard", :via => :get
+
   root :to => "users#dashboard"
 
   # The priority is based upon order of creation:

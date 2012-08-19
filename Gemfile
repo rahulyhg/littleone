@@ -14,6 +14,10 @@ gem 'redis'
 gem 'resque'
 gem 'mobylette'
 
+gem 'eventmachine'
+gem 'em-websocket'
+gem 'em-http-request'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

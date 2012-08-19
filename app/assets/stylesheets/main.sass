@@ -1,0 +1,65 @@
+$dark-color: #00B4FF
+$page-width: 900px
+$text-color: #fff
+
+@mixin clearfix
+  display: inline-block
+  &:after
+    content: "."
+    display: block
+    height: 0 
+    clear: both
+    visibility: hidden
+  * html & 
+    height: 1px
+
+@mixin border-radius($radius: 5px)
+  border-radius: $radius
+
+@mixin box-shadow($left: 0px, $top: 1px, $blur: 2px, $color: #000, $inset:"")
+  -webkit-box-shadow: $left $top  $blur $color #{$inset}
+  -moz-box-shadow: $left $top $blur $color #{$inset}
+  box-shadow: $left $top $blur $color #{$inset}
+
+body
+  font-family: HelveticaNeue, Helvetica, Sans-Serif
+  font-size: 12px
+  background-color: $dark-color
+  color: $text-color
+
+
+.login_page
+  $width: 500px
+  $height: 200px
+  width: $width
+  height: $height
+  +border-radius(10px)
+  position: absolute
+  top: 50%
+  left: 50%
+  margin: (-$height / 2) 0px 0px (-$width / 2)
+  background-color: lighten($dark-color, 5%)
+  padding: 20px
+  color: #fff
+
+  .title
+    font-size: 48px
+    font-weight: bold
+    text-align: center
+
+  form
+    padding-left: 130px
+    padding-top: 20px
+
+    label
+      width: 300px
+      font-size: 20px
+
+.nav
+  li
+    list-style-type: none
+    a
+      text-decoration: none
+      color: $text-color
+      font-size: 24px
+      font-weight: bold
